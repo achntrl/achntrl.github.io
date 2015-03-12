@@ -1,0 +1,21 @@
+# Site settings
+title: "achntrl"
+header-img: img/home-bg.jpg
+email: alexandre@achntrl.com
+description: "Alexandre Chaintreuil - Student at Ecole Centrale Paris. Passionate about space exploration"
+baseurl: ""
+url: "http://www.achntrl.com"
+twitter_username: achntrl
+github_username:  achntrl
+facebook_username:  alexandre.chaintreuil
+linkedin_username: alexandrechaintreuil
+author: Alexandre Chaintreuil
+
+# Build settings
+gems: [jekyll-paginate]
+markdown: redcarpet
+# highlighter: pygments
+permalink: pretty
+paginate: 5
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md",]
+
