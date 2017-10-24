@@ -1,11 +1,12 @@
 ---
-layout:     post
-title:      "Build an oscilloscope with an Arduino"
-subtitle:   "Really cheap, really easy"
-date:       2016-04-05 12:00:00
-author:     "Alexandre"
-header-img: "img/post-bg-07.jpg"
-comments: True
+layout:      post
+title:       "Build an oscilloscope with an Arduino"
+subtitle:    "Really cheap, really easy"
+date:        2016-04-05 12:00:00
+update-date: 2016-09-01 12:00:00
+author:      "Alexandre"
+header-img:  "img/post-bg-07.jpg"
+comments:    True
 
 ---
 

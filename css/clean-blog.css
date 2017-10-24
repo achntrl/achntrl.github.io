@@ -235,7 +235,7 @@ hr.small {
   }
   .intro-header .post-heading .subheading {
     font-size: 30px;
-    
+
   }
 }
 .post-preview > a {
@@ -489,4 +489,17 @@ body {
          url('../fonts/FlamaMedium-webfont.woff') format('woff'),
          url('../fonts/FlamaMedium-webfont.ttf') format('truetype'),
          url('../fonts/FlamaMedium-webfont.svg#flamamediumregular') format('svg');
+}
+
+.blur-on{
+
+  padding: 20px 20px;
+}
+
+/* if backdrop support: very transparent and blurred */
+@supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  .blur-on {
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(1px);
+  }
 }

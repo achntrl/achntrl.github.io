@@ -1,11 +1,12 @@
 ---
-layout:     post
-title:      "My five last books"
-subtitle:   "Food for thoughts and for dreams"
-date:       2016-05-29 12:00:00
-author:     "Alexandre"
-header-img: "img/books_pt1.jpg"
-comments: True
+layout:      post
+title:       "My five last books"
+subtitle:    "Food for thoughts and for dreams"
+date:        2016-05-29 12:00:00
+update-date: 2016-05-29 12:00:00
+author:      "Alexandre"
+header-img:  "img/books_pt1.jpg"
+comments:    True
 
 ---
 
