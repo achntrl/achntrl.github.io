@@ -12,8 +12,8 @@ linkedin_username: alexandrechaintreuil
 author: Alexandre Chaintreuil
 
 # Build settings
-gems: [jekyll-paginate]
-markdown: redcarpet
+plugins: [jekyll-paginate]
+markdown: kramdown
 # highlighter: pygments
 permalink: pretty
 paginate: 5
