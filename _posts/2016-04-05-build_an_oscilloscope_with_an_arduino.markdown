@@ -156,9 +156,12 @@ void serialEvent (Serial serialConnexion)
 <img src="{{ site.baseurl }}/img/oscillogramme.png" alt="Oscillogramme">
 <span class="caption text-muted">"L" led voltage when the reset button is pressed (on another arduino)</span>
 
-## Todo in the future
-It would be interesting to add some functionalities like the possibility to:
+*Update (01/09/2016):* [New version here](https://github.com/achntrl/arduino-oscilloscope)
 
-* change the time resolution
-* change the voltage resolution
-* implement a trigger
+## ~~Todo in the future~~
+
+~~It would be interesting to add some functionalities like the possibility to:~~
+
+* ~~change the time resolution~~
+* ~~change the voltage resolution~~
+* ~~implement a trigger~~
