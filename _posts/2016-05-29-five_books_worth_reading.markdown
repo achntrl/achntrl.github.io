@@ -13,18 +13,18 @@ Here are the last five books I have read and appreciated
 
 
 ## The Martian - Andy Weir
-The release of the eponymous movie in theaters in October 2015 sheds light on a book I didn't know. After seeing the movie and liking it, I decided I should read the book. 
+The release of the eponymous movie in theaters in October 2015 sheds light on a book I didn't know. After seeing the movie and liking it, I decided I should read the book.
 
 I found it very convincing, most of the physics involved feels real (even though there are inaccuracies : for instance, the atmospheric pressure on Mars is about 1/100th of the pressure on Earth, hence the winds wouldn't be as strong)
 
 Overall, I really enjoyed it, even though I knew the plot beforehand. It helps that the book is, as always, more detailed than the movie
 
 ## The Case for Mars: The Plan to Settle the Red Planet and Why We Must - Robert Zubrin
-After reading The Martian, the question of Mars exploration came naturally and I bought the case for Mars on Amazon shortly afterwards. 
+After reading The Martian, the question of Mars exploration came naturally and I bought the case for Mars on Amazon shortly afterwards.
 
 The book is fascinating, and explains how with current technology, we could go to Mars in less than 10 years, the same way we went to the Moon less than 10 years after Kennedy pronounced the famous Rice Speech.
 
-It covers every technical aspects of the project and provides really convincing explanation. It even goes further with an explanation on how feasible terraforming Mars is (and it is! But it will take a few generations). In the end, the book even feels a bit too good to be true and you end up wondering why aren't we on Mars yet! An explanation is provided: bureaucracy and politics went in the way of the ambitious program. 
+It covers every technical aspects of the project and provides really convincing explanation. It even goes further with an explanation on how feasible terraforming Mars is (and it is! But it will take a few generations). In the end, the book even feels a bit too good to be true and you end up wondering why aren't we on Mars yet! An explanation is provided: bureaucracy and politics went in the way of the ambitious program.
 
 ## The Right Stuff - Tom Wolfe
 The history of US Air Force test pilots, breaking speed records and involved in the birth of the US Space Program.
