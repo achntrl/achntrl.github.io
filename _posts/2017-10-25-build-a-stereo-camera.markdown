@@ -15,7 +15,7 @@ comments:    True
 Stereo vision is using two cameras to capture the same scene from different angles.
 It allows us to extract 3D information from the relative position of the same objects in the scene.
 
-You can then build a disparity map, also called depth map. It colors each pixel depending on its distance from the camera
+You can then build a disparity map, also called depth map. It colors each pixel depending on its distance to the camera
 ![Disparity Map]({{ site.baseurl }}/img/stereovision-disparitymap.png)
 
 ## Set up
