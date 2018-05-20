@@ -5,7 +5,6 @@ subtitle:    "See in 3 dimensions"
 date:        2017-10-25 12:00:00
 update-date: 2017-10-25 12:00:00
 author:      "Alexandre"
-header-img:  "img/post-bg-08.jpg"
 comments:    True
 
 ---

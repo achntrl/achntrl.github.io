@@ -5,7 +5,6 @@ title:       "Survive Vim With these 5 Simple Tricks"
 date:        2017-02-28 12:00:00
 update-date: 2017-02-28 12:00:00
 author:      "Alexandre"
-header-img:  "img/post-bg-08.jpg"
 comments:    True
 
 ---

@@ -7,13 +7,14 @@ body {
 	.serif;
 	font-size: 20px;
 	color: @gray-dark;
+	font-weight: 200;
 }
 
 // -- Typography
 
 p {
-	line-height: 1.5;
-	margin: 30px 0;
+	line-height: 1.4;
+	margin: 0.8em 0;
 	a {
 		text-decoration: underline;
 	}
@@ -26,7 +27,7 @@ h4,
 h5,
 h6 {
 	.sans-serif;
-	font-weight: 800;
+	font-weight: 500;
 }
 
 a {
@@ -47,27 +48,45 @@ a img {
 blockquote {
 	color: @gray;
 	font-style: italic;
+
+	&:before {
+		color: #808080;
+		content: open-quote;
+		font-size: 2em;
+		line-height: 0.1em;
+		margin-right: 0.40em;
+		vertical-align: -0.2em;
+	}
+	&:after {
+		color: #808080;
+		content: close-quote;
+		font-size: 2em;
+		line-height: 0.1em;
+		margin-right: 0.40em;
+		vertical-align: -0.2em;
+	}
 }
 
 hr.small {
 	max-width: 100px;
 	margin: 15px auto;
 	border-width: 4px;
-	border-color: white;
+	border-color: @white;
 }
 
 // Navigation
 
 .navbar-custom {
-	background: white;
+	background: @white;
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	z-index: 3;
-	.sans-serif;
+	.nav-bar-font;
 	.navbar-brand {
 		font-weight: 800;
+		font-family: 'Universe';
 	}
 	.nav {
 		li {
@@ -83,8 +102,9 @@ hr.small {
 		background: transparent;
 		border-bottom: 1px solid transparent;
 		.navbar-brand {
-			color: white;
+			color: @white;
 			padding: 20px;
+			font-family: 'Universe';
 			&:hover,
 			&:focus {
 				color: @white-faded;
@@ -93,7 +113,7 @@ hr.small {
 		.nav {
 			li {
 				a {
-					color: white;
+					color: @white;
 					padding: 20px;
 					&:hover,
 					&:focus {
@@ -154,34 +174,37 @@ hr.small {
 	}
 }
 
+.navbar-bg {
+	background-color: @gray-dark;
+	padding: 25px 0px;
+
+	@media only screen and (min-width: 768px) {
+		padding: 30px 0px;
+	}
+}
+
 // Header
 
 .intro-header {
 	background: no-repeat center center;
-	background-color: @gray;
 	background-attachment: scroll;
 	.background-cover;
 	// NOTE: Background images are set within the HTML using inline CSS!
-	margin-bottom: 50px;
-	.site-heading,
-	.post-heading,
-	.page-heading {
-		padding: 100px 0 50px;
-		color: white;
-		@media only screen and (min-width: 768px) {
-			padding: 150px 0;
-		}
-	}
+	margin-bottom: 15px;
 	.site-heading,
 	.page-heading {
+		padding: 50px 0 50px;
 		text-align: center;
+		color: @white;
 		h1 {
 			margin-top: 0;
 			font-size: 50px;
+			text-transform: uppercase;
+			letter-spacing: -1.5px;
 		}
 		.subheading {
 			font-size: 24px;
-			line-height: 1.1,
+			line-height: 1.1;
 			display: block;
 			.sans-serif;
 			font-weight: 300;
@@ -194,6 +217,8 @@ hr.small {
 		}
 	}
 	.post-heading {
+		color: @gray-dark;
+		padding: 50px 0 15px;
 		h1 {
 			font-size: 35px;
 		}
@@ -214,7 +239,7 @@ hr.small {
 			font-weight: 300;
 			font-size: 20px;
 			a {
-				color: white;
+				color: @white;
 			}
 		}
 		@media only screen and (min-width: 768px) {
@@ -387,7 +412,7 @@ form .row:first-child .floating-label-form-group {
 	&:focus {
 		background-color: @brand-primary;
 		border: 1px solid @brand-primary;
-		color: white;
+		color: @white;
 	}
 }
 
@@ -406,7 +431,7 @@ form .row:first-child .floating-label-form-group {
 			font-weight: 800;
 			letter-spacing: 1px;
 			padding: 10px 5px;
-			background-color: white;
+			background-color: @white;
 			border-radius: 0;
 			@media only screen and (min-width: 768px) {
 				font-size: 14px;
@@ -416,7 +441,7 @@ form .row:first-child .floating-label-form-group {
 
 		> a:hover,
 		> a:focus {
-			color: white;
+			color: @white;
 			background-color: @brand-primary;
 			border: 1px solid @brand-primary;
 		}
@@ -437,27 +462,82 @@ form .row:first-child .floating-label-form-group {
 // -- Highlight Color Customization
 
 ::-moz-selection {
-	color: white;
+	color: @white;
 	text-shadow: none;
 	background: @brand-primary;
 }
 
 ::selection {
-	color: white;
+	color: @white;
 	text-shadow: none;
 	background: @brand-primary;
 }
 
 img::selection {
-	color: white;
+	color: @white;
 	background: transparent;
 }
 
 img::-moz-selection {
-	color: white;
+	color: @white;
 	background: transparent;
 }
 
 body {
 	webkit-tap-highlight-color: @brand-primary;
+}
+
+#disqus_thread {
+	padding-top: 2em;
+}
+
+@font-face {
+    font-family: 'Universe';
+    src: url('../fonts/Universe.eot');
+    src: url('../fonts/Universe.eot') format('embedded-opentype'),
+         url('../fonts/Universe.woff2') format('woff2'),
+         url('../fonts/Universe.woff') format('woff'),
+         url('../fonts/Universe.ttf') format('truetype'),
+         url('../fonts/Universe.svg#Universe') format('svg');
+}
+
+
+@font-face {
+    font-family: 'Futrista';
+    src: url('../fonts/Futrista.eot');
+    src: url('../fonts/Futrista.eot') format('embedded-opentype'),
+         url('../fonts/Futrista.woff2') format('woff2'),
+         url('../fonts/Futrista.woff') format('woff'),
+         url('../fonts/Futrista.ttf') format('truetype'),
+         url('../fonts/Futrista.svg#Futrista') format('svg');
+}
+
+@font-face {
+    font-family: 'GoudyOldStyleRegular';
+    src: url('../fonts/GoudyOldStyleRegular.eot');
+    src: url('../fonts/GoudyOldStyleRegular.eot') format('embedded-opentype'),
+         url('../fonts/GoudyOldStyleRegular.woff2') format('woff2'),
+         url('../fonts/GoudyOldStyleRegular.woff') format('woff'),
+         url('../fonts/GoudyOldStyleRegular.ttf') format('truetype'),
+         url('../fonts/GoudyOldStyleRegular.svg#GoudyOldStyleRegular') format('svg');
+}
+
+@font-face {
+    font-family: 'slingnormal';
+    src: url('../fonts/Sling-webfont.eot');
+    src: url('../fonts/Sling-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Sling-webfont.woff2') format('woff2'),
+         url('../fonts/Sling-webfont.woff') format('woff'),
+         url('../fonts/Sling-webfont.ttf') format('truetype'),
+         url('../fonts/Sling-webfont.svg#slingnormal') format('svg');
+
+}
+@font-face {
+    font-family: 'flamamediumregular';
+    src: url('../fonts/FlamaMedium-webfont.eot');
+    src: url('../fonts/FlamaMedium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/FlamaMedium-webfont.woff2') format('woff2'),
+         url('../fonts/FlamaMedium-webfont.woff') format('woff'),
+         url('../fonts/FlamaMedium-webfont.ttf') format('truetype'),
+         url('../fonts/FlamaMedium-webfont.svg#flamamediumregular') format('svg');
 }

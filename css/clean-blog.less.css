@@ -3,6 +3,7 @@ body {
   font-size: 20px;
   color: #282a36;
   font-weight: 200;
+  background-color: white;
 }
 p {
   line-height: 1.4;
@@ -162,11 +163,15 @@ hr.small {
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
-  margin-bottom: 15px;
+  margin-bottom: 50px;
+}
+.intro-header .site-heading,
+.intro-header .post-heading,
+.intro-header .page-heading {
+  padding: 50px 0 50px;
 }
 .intro-header .site-heading,
 .intro-header .page-heading {
-  padding: 50px 0 50px;
   text-align: center;
   color: white;
 }
@@ -194,7 +199,6 @@ hr.small {
 }
 .intro-header .post-heading {
   color: #282a36;
-  padding: 50px 0 15px;
 }
 .intro-header .post-heading h1 {
   font-size: 35px;
