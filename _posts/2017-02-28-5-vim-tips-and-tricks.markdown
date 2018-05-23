@@ -1,7 +1,6 @@
 ---
 layout:      post
 title:       "Survive Vim With these 5 Simple Tricks"
-# subtitle:    "See in 3 dimensions"
 date:        2017-02-28 12:00:00
 update-date: 2017-02-28 12:00:00
 author:      "Alexandre"

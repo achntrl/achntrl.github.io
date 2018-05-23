@@ -1,0 +1,48 @@
+---
+layout:      post
+title:       "100 days of Rust"
+date:        2018-05-23 12:00:00
+update-date: 2018-05-23 12:00:00
+author:      "Alexandre"
+comments:    True
+
+---
+
+## Motivations
+
+I became interested in Rust when I heard about safety. Buffer overruns or some sort of mishandling of memory cause a lot of vulnerabilites. [There is an interesting discussion about that on reddit](https://www.reddit.com/r/rust/comments/5y3cxb/how_many_security_exploits_would_rust_prevent/). It is a bit biased because it's on [/r/rust](https://reddit.com/r/rust).
+
+People claim that you _just have to git gud_ (and usually claim that _they_ write
+bug free C or C++). Yet super experienced developers are making those bugs. Rust appears
+to be an interesting way of avoiding these kind of bugs **by design**, and without runtime cost.
+
+An interesting debate is [whether or not we should rewrite everything in Rust.](https://robert.ocallahan.org/2016/02/rewrite-everything-in-rust.html). (I'm not
+sure that's a pratical solution).
+
+It was enough to spark my interest. Even if I don't end up [rewriting everything in Rust](https://github.com/ansuz/RIIR), I will probably learn interesting concepts along the way.
+
+I'm not a total newbie, I have already started two projects:
+
+1. [A web server](https://github.com/achntrl/rust-webserver): That was my first non "Hello World!" program, trying to understand how a web server might work and learning Rust at the same time. It was over a year ago.
+2. [An SQLite clone](https://github.com/achntrl/sqlite-rust): I started 4 months ago, based on [cstack tutorial](https://cstack.github.io/db_tutorial/) on how to write a db. I struggled because my knowledge of the language wasn't good and I struggled to manage allocations of Rows and Pages.
+
+Then, I was preparing interviews so I focused on that. Now that I got the job (Yay! 🎉), I can get back at it.
+
+## Resources
+
+I will start with the [Rust book](https://doc.rust-lang.org/book/second-edition/index.html).
+
+I will then port a program I wrote for some homework: [a http log monitoring program](https://github.com/achntrl/HttpLogMonitoring).
+
+From then, I have three options that I find interesting:
+
+- Get back at the database
+- Write an OS following [CS140e from Stanford](http://web.stanford.edu/class/cs140e/) or [Philipp Oppermann's blog](https://os.phil-opp.com/)
+- Contribute to an open source project
+
+## The plan
+
+The plan is to spend at least an hour per day coding in Rust and to write about my
+learnings and my struggles.
+
+Starting today!
