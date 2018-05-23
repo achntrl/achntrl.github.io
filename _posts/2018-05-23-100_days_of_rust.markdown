@@ -46,3 +46,19 @@ The plan is to spend at least an hour per day coding in Rust and to write about 
 learnings and my struggles.
 
 Starting today!
+
+## Week 1
+
+### Day 1
+
+I read the Rust Book, second edition on ownership, structs and pattern matching.
+It's nicer than the first edition, the explaination are more detailled than in the
+first edition.
+
+I have not much to say today, because I am re-learning things I vaguely knew. I do feel
+that I have a better understanding of ownership now.
+
+I don't want to spend too much time reading the docs because I might lose interest without
+a real problem. On the cool side, I noticed a part about parsing CLI inputs in the book. That will be relevant for the http log monitoring program.
+
+I will try to reach that part by tomorrow, so I can then build something!
