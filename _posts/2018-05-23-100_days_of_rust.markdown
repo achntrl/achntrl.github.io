@@ -2,7 +2,7 @@
 layout:      post
 title:       "100 days of Rust"
 date:        2018-05-23 12:00:00
-update-date: 2018-05-23 12:00:00
+update-date: 2018-05-30 12:00:00
 author:      "Alexandre"
 comments:    True
 
@@ -49,7 +49,7 @@ Starting today!
 
 ## Week 1
 
-### Day 1
+### Day 1 (1h)
 
 I read the Rust Book, second edition on ownership, structs and pattern matching.
 It's nicer than the first edition, the explaination are more detailled than in the
@@ -61,4 +61,52 @@ that I have a better understanding of ownership now.
 I don't want to spend too much time reading the docs because I might lose interest without
 a real problem. On the cool side, I noticed a part about parsing CLI inputs in the book. That will be relevant for the http log monitoring program.
 
-I will try to reach that part by tomorrow, so I can then build something!
+I will try to reach that part by tomorrow, so I can build something!
+
+### Day 2 (1h)
+
+Today, I read some sections of the Rust book (modules and common collections). It is taking longer than expected because
+the doc if really thourough.
+
+The section 8.2 about `String` and UTF-8 is very interesting.
+
+### Day 3 (1h)
+
+I read about error handling, generic types and lifetimes. This has always been a part I
+never really understood. I think it's clearer now, but I need to write some code to
+apply this knowledge.
+
+Fortunately tomorrow, I will reach the Testing, and then the I/O program to write some
+real code.
+
+## Day 4 (45min)
+
+I read about Testing and experimented a bit on my own. It's nice to have everything built
+into the language and not import external libs (`unittest` or `pytest` comes to mind).
+
+It seems to lack the `assert_almost_equals` and other syntaxic sugar that I am used to.
+
+It is also a bit depressing not to have reached the coding part yet.
+
+## Day 5 (45min)
+
+Finally, I started coding! It took longer than expected but I'm getting there. It was
+frustrating to read interesting stuff and not code.
+
+I went with the `minigrep` example, trying to code ahead of the code blocks. I don't regret
+the time I spent reading the book because I understood all the compile error I got. I even
+foreseen some of them. It is definitely a step up from last time, when I would try to add
+`&`, `mut`, `str`/`String` and lifetime until it compiles. I stopped halfway through the chapter
+as I had to go to work.
+
+## Day 6 (2h)
+
+I was excited to come home and continue coding! I went through the exercice, wrote some tests
+and refactored the code.
+
+I also read the chapter on functional language features and the chapter on cargo.
+I will now work on the port of my log monitoring program.
+
+I will stop reading the books by large chunks and focus more on coding.
+There are 31 chapters left, I can take my time. I might need the chapter on concurrency for the port
+but not right from the start.
