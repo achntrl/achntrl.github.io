@@ -79,7 +79,7 @@ apply this knowledge.
 Fortunately tomorrow, I will reach the Testing, and then the I/O program to write some
 real code.
 
-## Day 4 (45min)
+### Day 4 (45min)
 
 I read about Testing and experimented a bit on my own. It's nice to have everything built
 into the language and not import external libs (`unittest` or `pytest` comes to mind).
@@ -88,7 +88,7 @@ It seems to lack the `assert_almost_equals` and other syntaxic sugar that I am u
 
 It is also a bit depressing not to have reached the coding part yet.
 
-## Day 5 (45min)
+### Day 5 (45min)
 
 Finally, I started coding! It took longer than expected but I'm getting there. It was
 frustrating to read interesting stuff and not code.
@@ -99,7 +99,7 @@ foreseen some of them. It is definitely a step up from last time, when I would t
 `&`, `mut`, `str`/`String` and lifetime until it compiles. I stopped halfway through the chapter
 as I had to go to work.
 
-## Day 6 (2h)
+### Day 6 (2h)
 
 I was excited to come home and continue coding! I went through the exercice, wrote some tests
 and refactored the code.
@@ -110,3 +110,21 @@ I will now work on the port of my log monitoring program.
 I will stop reading the books by large chunks and focus more on coding.
 There are 31 chapters left, I can take my time. I might need the chapter on concurrency for the port
 but not right from the start.
+
+### Day 7 (1h)
+
+It's time to start my own project: rewriting my [http log monitoring program](https://github.com/achntrl/HttpLogMonitoring)
+in Rust!
+
+I took the log generator that's written in Python to get started quickly. For the first
+part of the project, I can reuse what I learned about building a CLI with the minigrep project
+
+Starting the project was similar to the minigrep project. I built a program that could parse
+input from the CLI and read a file according to the argument
+
+As I'm parsing structured files, I used a regex and the [regex crate](https://docs.rs/regex/1.0.0/regex/).
+Fortunately, I had already written the regex in my earlier Python version. It wasn't too hard to adapt.
+I had a hard time escaping the double quote because I though `r"..."` was the regex string syntax just like in Python.
+In Rust, it means [__raw__ string](https://doc.rust-lang.org/reference/tokens.html#raw-string-literals).
+
+Reading the file and displaying its content was straighforward. I also wrote some tests on the parsing.
