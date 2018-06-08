@@ -445,3 +445,6 @@ body {
   src: url('../fonts/FlamaMedium-webfont.eot');
   src: url('../fonts/FlamaMedium-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/FlamaMedium-webfont.woff2') format('woff2'), url('../fonts/FlamaMedium-webfont.woff') format('woff'), url('../fonts/FlamaMedium-webfont.ttf') format('truetype'), url('../fonts/FlamaMedium-webfont.svg#flamamediumregular') format('svg');
 }
+code {
+  font-size: 70%;
+}

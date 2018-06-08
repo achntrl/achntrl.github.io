@@ -2,7 +2,7 @@
 layout:      post
 title:       "100 days of Rust"
 date:        2018-05-23 12:00:00
-update-date: 2018-05-30 12:00:00
+update-date: 2018-06-08 12:00:00
 author:      "Alexandre"
 comments:    True
 
@@ -128,3 +128,30 @@ I had a hard time escaping the double quote because I though `r"..."` was the re
 In Rust, it means [__raw__ string](https://doc.rust-lang.org/reference/tokens.html#raw-string-literals).
 
 Reading the file and displaying its content was straighforward. I also wrote some tests on the parsing.
+
+### Day 8 (1h)
+
+I created a my first `Consumer` that will ingest events and generate reports.
+I will have multiple consumers that will all ingest events and generate reports.
+
+This sounds like some similar behaviour between different classes. It makes sense to
+create a `Trait` for this:
+
+```rust
+pub trait Consumer {
+    fn ingest(&mut self, http_log: HttpLog);
+    fn report(&self);
+}
+```
+
+I implemented the first one `ErrorWatcher` that counts the number of 4xx and 5xx errors.
+The struct holds a numeric counter, and a hashmap that holds an `Enum` corresponding
+to the error codes and their respective counts.
+
+I could have done it more easily with just numeric counters (`error_4xx_count` and `error_5xx_count`)
+but I wanted to experiment with the `std::collections::Hashmap`.
+
+It was interesting to see you need to implement 3 `Trait`s to use something as a hashmap key.
+For basic types, you can derive them automatically with the annotation: `#[derive(PartialEq, Eq, Hash)]`
+
+I managed to wrote some tests for the ingestion.
