@@ -2,7 +2,7 @@
 layout:      post
 title:       "100 days of Rust"
 date:        2018-05-23 12:00:00
-update-date: 2018-06-08 12:00:00
+update-date: 2018-06-11 12:00:00
 author:      "Alexandre"
 comments:    True
 
@@ -155,3 +155,28 @@ It was interesting to see you need to implement 3 `Trait`s to use something as a
 For basic types, you can derive them automatically with the annotation: `#[derive(PartialEq, Eq, Hash)]`
 
 I managed to wrote some tests for the ingestion.
+
+### Day 9 (3h)
+
+I implemented another consumer: the `Ranker` that reports the most active hosts and
+the most requested first directories of urls (`this-part` in `http://url.com/this-part/that-other-part`).
+
+I had more fun with hashmaps: the `Ranker` struct holds 2 `Hashmap<String, u32>`.
+To compute a ranking, I needed to sort the keys by values. I built a `Vec` holding the tuple and
+sort it on the 2<sup>nd</sup> value:
+
+```rust
+fn rank<'a>(&self, container: &'a HashMap<String, u32>) -> Vec<(&'a String, &'a u32)> {
+    let mut ranking: Vec<(&String, &u32)> = container.iter().collect();
+    ranking.sort_by(|a, b| b.1.cmp(a.1));
+
+    ranking.truncate(self.max_ranking);
+
+    ranking
+}
+```
+
+It doesn't feel idiomatic though...
+
+The consumer.rs file started to grow big. I refactored it as a module. I also implemented
+some tests.
