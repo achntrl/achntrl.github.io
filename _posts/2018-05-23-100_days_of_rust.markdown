@@ -180,3 +180,116 @@ It doesn't feel idiomatic though...
 
 The consumer.rs file started to grow big. I refactored it as a module. I also implemented
 some tests.
+
+### Day 10 (1h)
+
+My goal is to implement threading. That will allow the program to have one
+ingesting thread that continuously fills a queue with new log events, and another thread
+that computes stuff and displays it in the terminal.
+
+My first challenge was to have a container that contains a trait. That is not directly possible
+because
+
+```text
+error[E0277]: the trait bound `consumer::Consumer: std::marker::Sized` is not satisfied
+  --> src/lib.rs:40:21
+   |
+40 |     let consumers : Vec<Consumer> = Vec::new();
+   |                     ^^^^^^^^^^^^^ `consumer::Consumer` does not have a constant size known at compile-time
+   |
+   = help: the trait `std::marker::Sized` is not implemented for `consumer::Consumer`
+   = note: required by `std::vec::Vec`
+```
+
+The [solution](https://stackoverflow.com/questions/25818082/vector-of-objects-belonging-to-a-trait) is quite simple (use a reference or a `Box`) but it raises an interesting questions: [should I use a `&` or a `Box`?](https://stackoverflow.com/questions/27305585/what-is-the-difference-between-passing-a-value-to-a-function-by-reference-and-pa).
+TL;DR: With a reference, you lend the value, with a `Box` you take ownership and you're now
+responsible for the `Drop`. In our case, we don't want more responsibility: reference it is.
+
+I run into an interesting problem. This code would not compile
+
+```rust
+let mut consumers : Vec<&mut Consumer> = Vec::new();
+let mut error_watcher = ErrorWatcher::new();
+let mut ranker = Ranker::new();
+consumers.push(&mut error_watcher);
+consumers.push(&mut ranker);
+```
+
+```text
+error[E0597]: `error_watcher` does not live long enough
+  --> src/lib.rs:45:25
+   |
+45 |     consumers.push(&mut error_watcher);
+   |                         ^^^^^^^^^^^^^ borrowed value does not live long enough
+...
+72 | }
+   | - `error_watcher` dropped here while still borrowed
+   |
+   = note: values in a scope are dropped in the opposite order they are created
+```
+
+The important thing here is the note at the bottom: `values in a scope are dropped in the opposite order they are created`
+At the end of the program, `error_watcher` would get dropped, then `consumers`.
+In that short moment of time, `consumers` would have a dangling reference.
+
+The solution is to change the order:
+
+```diff
+-let mut consumers : Vec<&mut Consumer> = Vec::new();
+ let mut error_watcher = ErrorWatcher::new();
+ let mut ranker = Ranker::new();
++let mut consumers : Vec<&mut Consumer> = Vec::new();
+ consumers.push(&mut error_watcher);
+ consumers.push(&mut ranker);
+```
+
+### Day 11 (2h)
+
+I started by reading more of the Rust Book: the chapters on Smart Pointers and Concurrency.
+That was an interesting read again, and I have some pointers (haha!) on how I will implement
+threading in the program.
+
+I first wanted to benchmark the single threaded performance and compare it to the Python
+program. I started implementing the Alerter which raises an alert when there are too
+many requests.
+
+I implented the `Alert` struct that will hold the information for one alert.
+
+
+### Day 12 (2h)
+
+I implented the logic for the `Alerter` (the consumer that raises alerts). I spent way more
+time than I expected on handling timezones with the `chrono` crate.
+
+At first, I couldn't get the parsing of the date working:
+
+```rust
+extern crate chrono;
+
+use chrono::{DateTime, Local, TimeZone, FixedOffset, Utc};
+
+fn main() {
+    let working_input_string = "05/Jun/2018:20:55:45 +0200";
+    match Local.datetime_from_str(working_input_string,"%d/%b/%Y:%T %z") {
+        Ok(d) => println!("{:?}", d),
+        Err(err) => println!("{}", err),
+    }
+
+    let failing_input_string = "05/Jun/2018:20:55:45 +0300";
+    match Local.datetime_from_str(failing_input_string,"%d/%b/%Y:%T %z") {
+        Ok(d) => println!("{:?}", d),
+        Err(err) => println!("{}", err),
+    }
+}
+```
+
+The first datetime would be parsed just fine, but the second one wouldn't.
+I get the following error message: `no possible date and time matching input`. Note
+that I live in a UTC+2 timezone
+
+At first, I thought that I was related to the offset (the lib has no way of knowing which
+timezone to convert to because the offset of my timezone changes with DST). But the same
+issue appears with UTC (this time only the `+0000` offset get parsed). I will raise an
+issue on the crate repo to clarify this.
+
+Finally, I chose to parse time with `DateTime::parse_from_str` and convert it to Local time.
