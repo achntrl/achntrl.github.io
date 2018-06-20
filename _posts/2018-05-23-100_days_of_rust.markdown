@@ -2,7 +2,7 @@
 layout:      post
 title:       "100 days of Rust"
 date:        2018-05-23 12:00:00
-update-date: 2018-06-11 12:00:00
+update-date: 2018-06-20 12:00:00
 author:      "Alexandre"
 comments:    True
 
@@ -290,6 +290,6 @@ that I live in a UTC+2 timezone
 At first, I thought that I was related to the offset (the lib has no way of knowing which
 timezone to convert to because the offset of my timezone changes with DST). But the same
 issue appears with UTC (this time only the `+0000` offset get parsed). I will raise an
-issue on the crate repo to clarify this.
+issue on the crate repo to clarify this. Edit: [Done](https://github.com/chronotope/chrono/issues/255)
 
 Finally, I chose to parse time with `DateTime::parse_from_str` and convert it to Local time.
