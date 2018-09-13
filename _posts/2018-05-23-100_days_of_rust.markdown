@@ -2,7 +2,7 @@
 layout:      post
 title:       "100 days of Rust"
 date:        2018-05-23 12:00:00
-update-date: 2018-06-20 12:00:00
+update-date: 2018-09-13 12:00:00
 author:      "Alexandre"
 comments:    True
 
@@ -255,7 +255,6 @@ many requests.
 
 I implented the `Alert` struct that will hold the information for one alert.
 
-
 ### Day 12 (2h)
 
 I implented the logic for the `Alerter` (the consumer that raises alerts). I spent way more
@@ -293,3 +292,13 @@ issue appears with UTC (this time only the `+0000` offset get parsed). I will ra
 issue on the crate repo to clarify this. Edit: [Done](https://github.com/chronotope/chrono/issues/255)
 
 Finally, I chose to parse time with `DateTime::parse_from_str` and convert it to Local time.
+
+### Final Update
+
+I failed at the 100 days challenge. I took a week of holidays in July and then
+I didn't went back at coding in Rust (mostly out of laziness). Now that things have
+settled a bit (I switched jobs and appartments during the summer).
+
+I still have an interest in Rust so I will take out this challenge again, maybe under
+another form, but the goal is to code in Rust for around 100 hours and see what
+progress I made.
