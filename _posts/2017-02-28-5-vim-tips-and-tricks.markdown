@@ -8,7 +8,7 @@ comments:    True
 
 ---
 
-<p>This article was origininally published on <a href="https://blog.theodo.fr/2017/02/survive-vim-with-these-5-simple-tricks/">Theodo's blog</a></p>
+<p>This article was origininally published on <a href="https://blog.theodo.fr/2017/02/survive-vim-with-these-5-simple-tricks/" target="_blank">Theodo's blog</a></p>
 
 <hr/>
 

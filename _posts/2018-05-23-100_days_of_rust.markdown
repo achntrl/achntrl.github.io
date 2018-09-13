@@ -10,34 +10,34 @@ comments:    True
 
 ## Motivations
 
-I became interested in Rust when I heard about safety. Buffer overruns or some sort of mishandling of memory cause a lot of vulnerabilites. [There is an interesting discussion about that on reddit](https://www.reddit.com/r/rust/comments/5y3cxb/how_many_security_exploits_would_rust_prevent/). It is a bit biased because it's on [/r/rust](https://reddit.com/r/rust).
+I became interested in Rust when I heard about safety. Buffer overruns or some sort of mishandling of memory cause a lot of vulnerabilites. [There is an interesting discussion about that on reddit](https://www.reddit.com/r/rust/comments/5y3cxb/how_many_security_exploits_would_rust_prevent/){:target="_blank"}. It is a bit biased because it's on [/r/rust](https://reddit.com/r/rust){:target="_blank"}.
 
 People claim that you _just have to git gud_ (and usually claim that _they_ write
 bug free C or C++). Yet super experienced developers are making those bugs. Rust appears
 to be an interesting way of avoiding these kind of bugs **by design**, and without runtime cost.
 
-An interesting debate is [whether or not we should rewrite everything in Rust.](https://robert.ocallahan.org/2016/02/rewrite-everything-in-rust.html). (I'm not
+An interesting debate is [whether or not we should rewrite everything in Rust.](https://robert.ocallahan.org/2016/02/rewrite-everything-in-rust.html){:target="_blank"}. (I'm not
 sure that's a pratical solution).
 
-It was enough to spark my interest. Even if I don't end up [rewriting everything in Rust](https://github.com/ansuz/RIIR), I will probably learn interesting concepts along the way.
+It was enough to spark my interest. Even if I don't end up [rewriting everything in Rust](https://github.com/ansuz/RIIR){:target="_blank"}, I will probably learn interesting concepts along the way.
 
 I'm not a total newbie, I have already started two projects:
 
-1. [A web server](https://github.com/achntrl/rust-webserver): That was my first non "Hello World!" program, trying to understand how a web server might work and learning Rust at the same time. It was over a year ago.
-2. [An SQLite clone](https://github.com/achntrl/sqlite-rust): I started 4 months ago, based on [cstack tutorial](https://cstack.github.io/db_tutorial/) on how to write a db. I struggled because my knowledge of the language wasn't good and I struggled to manage allocations of Rows and Pages.
+1. [A web server](https://github.com/achntrl/rust-webserver){:target="_blank"}: That was my first non "Hello World!" program, trying to understand how a web server might work and learning Rust at the same time. It was over a year ago.
+2. [An SQLite clone](https://github.com/achntrl/sqlite-rust{:target="_blank"}): I started 4 months ago, based on [cstack tutorial](https://cstack.github.io/db_tutorial/){:target="_blank"} on how to write a db. I struggled because my knowledge of the language wasn't good and I struggled to manage allocations of Rows and Pages.
 
 Then, I was preparing interviews so I focused on that. Now that I got the job (Yay! 🎉), I can get back at it.
 
 ## Resources
 
-I will start with the [Rust book](https://doc.rust-lang.org/book/second-edition/index.html).
+I will start with the [Rust book](https://doc.rust-lang.org/book/second-edition/index.html){:target="_blank"}.
 
-I will then port a program I wrote for some homework: [a http log monitoring program](https://github.com/achntrl/HttpLogMonitoring).
+I will then port a program I wrote for some homework: [a http log monitoring program](https://github.com/achntrl/HttpLogMonitoring){:target="_blank"}.
 
 From then, I have three options that I find interesting:
 
 - Get back at the database
-- Write an OS following [CS140e from Stanford](http://web.stanford.edu/class/cs140e/) or [Philipp Oppermann's blog](https://os.phil-opp.com/)
+- Write an OS following [CS140e from Stanford](http://web.stanford.edu/class/cs140e/){:target="_blank"} or [Philipp Oppermann's blog](https://os.phil-opp.com/){:target="_blank"}
 - Contribute to an open source project
 
 ## The plan
@@ -113,7 +113,7 @@ but not right from the start.
 
 ### Day 7 (1h)
 
-It's time to start my own project: rewriting my [http log monitoring program](https://github.com/achntrl/HttpLogMonitoring)
+It's time to start my own project: rewriting my [http log monitoring program](https://github.com/achntrl/HttpLogMonitoring){:target="_blank"}
 in Rust!
 
 I took the log generator that's written in Python to get started quickly. For the first
@@ -122,10 +122,10 @@ part of the project, I can reuse what I learned about building a CLI with the mi
 Starting the project was similar to the minigrep project. I built a program that could parse
 input from the CLI and read a file according to the argument
 
-As I'm parsing structured files, I used a regex and the [regex crate](https://docs.rs/regex/1.0.0/regex/).
+As I'm parsing structured files, I used a regex and the [regex crate](https://docs.rs/regex/1.0.0/regex/){:target="_blank"}.
 Fortunately, I had already written the regex in my earlier Python version. It wasn't too hard to adapt.
 I had a hard time escaping the double quote because I though `r"..."` was the regex string syntax just like in Python.
-In Rust, it means [__raw__ string](https://doc.rust-lang.org/reference/tokens.html#raw-string-literals).
+In Rust, it means [__raw__ string](https://doc.rust-lang.org/reference/tokens.html#raw-string-literals){:target="_blank"}.
 
 Reading the file and displaying its content was straighforward. I also wrote some tests on the parsing.
 
@@ -201,7 +201,7 @@ error[E0277]: the trait bound `consumer::Consumer: std::marker::Sized` is not sa
    = note: required by `std::vec::Vec`
 ```
 
-The [solution](https://stackoverflow.com/questions/25818082/vector-of-objects-belonging-to-a-trait) is quite simple (use a reference or a `Box`) but it raises an interesting questions: [should I use a `&` or a `Box`?](https://stackoverflow.com/questions/27305585/what-is-the-difference-between-passing-a-value-to-a-function-by-reference-and-pa).
+The [solution](https://stackoverflow.com/questions/25818082/vector-of-objects-belonging-to-a-trait){:target="_blank"} is quite simple (use a reference or a `Box`) but it raises an interesting questions: [should I use a `&` or a `Box`?](https://stackoverflow.com/questions/27305585/what-is-the-difference-between-passing-a-value-to-a-function-by-reference-and-pa){:target="_blank"}
 TL;DR: With a reference, you lend the value, with a `Box` you take ownership and you're now
 responsible for the `Drop`. In our case, we don't want more responsibility: reference it is.
 
@@ -289,7 +289,7 @@ that I live in a UTC+2 timezone
 At first, I thought that I was related to the offset (the lib has no way of knowing which
 timezone to convert to because the offset of my timezone changes with DST). But the same
 issue appears with UTC (this time only the `+0000` offset get parsed). I will raise an
-issue on the crate repo to clarify this. Edit: [Done](https://github.com/chronotope/chrono/issues/255)
+issue on the crate repo to clarify this. Edit: [Done](https://github.com/chronotope/chrono/issues/255){:target="_blank"}
 
 Finally, I chose to parse time with `DateTime::parse_from_str` and convert it to Local time.
 
