@@ -27,17 +27,17 @@ You're going to need:
 
 I used the latest version of Raspbian at the time: `2017-07-05-raspbian-jessie-lite`.
 
-You can follow [this guide](https://www.theodo.fr/blog/2017/03/getting-started-headless-on-raspberry-pi-in-10-minutes/) to set up the RPs and [this guide](http://weworkweplay.com/play/automatically-connect-a-raspberry-pi-to-a-wifi-network/) to set up the Wifi (optional).
+You can follow [this guide](https://www.theodo.fr/blog/2017/03/getting-started-headless-on-raspberry-pi-in-10-minutes/){:target="_blank"} to set up the RPs and [this guide](http://weworkweplay.com/play/automatically-connect-a-raspberry-pi-to-a-wifi-network/){:target="_blank"} to set up the Wifi (optional).
 
 On each RP, enable the camera with:
 
 ~~~bash
 sudo raspi-config
-~~~~
+~~~
 
 You have to navigate in the menu to enable the camera and reboot.
 
-Then we will use [motion](https://github.com/Motion-Project/motion) as our streaming server
+Then we will use [motion](https://github.com/Motion-Project/motion){:target="_blank"} as our streaming server
 
 ~~~bash
 sudo apt-get install motion
@@ -50,7 +50,7 @@ sudo vim /etc/modules
 
 and at the end of the file, add this line : `bcm2835-v4l2`.
 
-Then copy [this file](https://gist.github.com/achntrl/b97c42f636a3127e97613a9f65d0cde7) on the home of your RP (or at `/etc/motion/motion.conf`).
+Then copy [this file](https://gist.github.com/achntrl/b97c42f636a3127e97613a9f65d0cde7){:target="_blank"} on the home of your RP (or at `/etc/motion/motion.conf`).
 
 ~~~bash
 sudo motion start
