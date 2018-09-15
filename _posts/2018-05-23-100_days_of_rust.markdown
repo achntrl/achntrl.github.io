@@ -14,7 +14,7 @@ I became interested in Rust when I heard about safety. Buffer overruns or some s
 
 People claim that you _just have to git gud_ (and usually claim that _they_ write
 bug free C or C++). Yet super experienced developers are making those bugs. Rust appears
-to be an interesting way of avoiding these kind of bugs **by design**, and without runtime cost.
+to be an interesting way of avoiding these kind of bugs by design, and without runtime cost.
 
 An interesting debate is [whether or not we should rewrite everything in Rust.](https://robert.ocallahan.org/2016/02/rewrite-everything-in-rust.html){:target="_blank"}. (I'm not
 sure that's a pratical solution).
@@ -125,7 +125,7 @@ input from the CLI and read a file according to the argument
 As I'm parsing structured files, I used a regex and the [regex crate](https://docs.rs/regex/1.0.0/regex/){:target="_blank"}.
 Fortunately, I had already written the regex in my earlier Python version. It wasn't too hard to adapt.
 I had a hard time escaping the double quote because I though `r"..."` was the regex string syntax just like in Python.
-In Rust, it means [__raw__ string](https://doc.rust-lang.org/reference/tokens.html#raw-string-literals){:target="_blank"}.
+In Rust, it means [raw string](https://doc.rust-lang.org/reference/tokens.html#raw-string-literals){:target="_blank"}.
 
 Reading the file and displaying its content was straighforward. I also wrote some tests on the parsing.
 

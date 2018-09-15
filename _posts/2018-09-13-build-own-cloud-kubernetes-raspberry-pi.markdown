@@ -9,4 +9,4 @@ comments:    True
 
 ---
 
-This article was published on [here Sicara's blog](https://blog.sicara.com/build-own-cloud-kubernetes-raspberry-pi-9e5a98741b49){:target="_blank"}.
+This article was published [here, on Sicara's blog](https://blog.sicara.com/build-own-cloud-kubernetes-raspberry-pi-9e5a98741b49){:target="_blank"}.
