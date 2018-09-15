@@ -1,8 +1,8 @@
 body {
-  font-family: 'GoudyOldStyleRegular', 'Times New Roman', serif;
-  font-size: 20px;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 18px;
   color: #282a36;
-  font-weight: 200;
+  background: #f8f8f2;
 }
 p {
   line-height: 1.4;
@@ -18,21 +18,21 @@ h4,
 h5,
 h6 {
   font-family: 'flamamediumregular', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
 }
 a {
   color: #282a36;
 }
 a:hover,
 a:focus {
-  color: #0085A1;
+  color: #AF1B3F;
 }
 a img:hover,
 a img:focus {
   cursor: zoom-in;
 }
 blockquote {
-  color: #808080;
+  color: #424342;
   font-style: italic;
 }
 blockquote:before {
@@ -53,12 +53,12 @@ blockquote:after {
 }
 hr.small {
   max-width: 100px;
-  margin: 15px auto;
+  margin: 5px auto;
   border-width: 4px;
-  border-color: white;
+  border-color: #282a36;
 }
 .navbar-custom {
-  background: white;
+  background: #282a36;
   position: absolute;
   top: 0;
   left: 0;
@@ -82,21 +82,22 @@ hr.small {
     border-bottom: 1px solid transparent;
   }
   .navbar-custom .navbar-brand {
-    color: white;
+    color: #f8f8f2;
+    height: 60px;
     padding: 20px;
     font-family: 'Universe';
   }
   .navbar-custom .navbar-brand:hover,
   .navbar-custom .navbar-brand:focus {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(248, 248, 242, 0.8);
   }
   .navbar-custom .nav li a {
-    color: white;
+    color: #f8f8f2;
     padding: 20px;
   }
   .navbar-custom .nav li a:hover,
   .navbar-custom .nav li a:focus {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(248, 248, 242, 0.8);
   }
 }
 @media only screen and (min-width: 1170px) {
@@ -117,8 +118,8 @@ hr.small {
     /* when the user scrolls down, we hide the header right above the viewport */
     position: fixed;
     top: -61px;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-bottom: 1px solid #f2f2f2;
+    background-color: rgba(248, 248, 242, 0.9);
+    border-bottom: 1px solid #efefe1;
     -webkit-transition: -webkit-transform 0.3s;
     -moz-transition: -moz-transform 0.3s;
     transition: transform 0.3s;
@@ -128,14 +129,14 @@ hr.small {
   }
   .navbar-custom.is-fixed .navbar-brand:hover,
   .navbar-custom.is-fixed .navbar-brand:focus {
-    color: #0085A1;
+    color: #AF1B3F;
   }
   .navbar-custom.is-fixed .nav li a {
     color: #282a36;
   }
   .navbar-custom.is-fixed .nav li a:hover,
   .navbar-custom.is-fixed .nav li a:focus {
-    color: #0085A1;
+    color: #AF1B3F;
   }
   .navbar-custom.is-visible {
     /* if the user changes the scrolling direction, we show the header */
@@ -145,6 +146,42 @@ hr.small {
     -o-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0);
   }
+}
+.navbar-default .navbar-brand {
+  color: #f8f8f2;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  background-color: #f8f8f2;
+  color: #282a36;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #f8f8f2;
+}
+.navbar-default .navbar-nav {
+  margin: 0px -15px;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #f8f8f2;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  background-color: #f8f8f2;
+  color: #282a36;
+}
+.navbar-default .navbar-toggle {
+  color: #f8f8f2;
+  border-color: #f8f8f2;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #f8f8f2;
+  color: #282a36;
+}
+.navbar-default .navbar-toggle:hover .icon-bar,
+.navbar-default .navbar-toggle:focus .icon-bar {
+  background-color: #282a36;
+  color: #282a36;
 }
 .navbar-bg {
   background-color: #282a36;
@@ -166,14 +203,14 @@ hr.small {
 }
 .intro-header .site-heading,
 .intro-header .page-heading {
-  padding: 50px 0 50px;
+  padding: 30px 0 30px;
   text-align: center;
-  color: white;
+  color: #282a36;
 }
 .intro-header .site-heading h1,
 .intro-header .page-heading h1 {
   margin-top: 0;
-  font-size: 50px;
+  font-size: 35px;
   text-transform: uppercase;
   letter-spacing: -1.5px;
 }
@@ -189,12 +226,12 @@ hr.small {
 @media only screen and (min-width: 768px) {
   .intro-header .site-heading h1,
   .intro-header .page-heading h1 {
-    font-size: 80px;
+    font-size: 40px;
   }
 }
 .intro-header .post-heading {
   color: #282a36;
-  padding: 50px 0 15px;
+  padding: 30px 0 15px;
 }
 .intro-header .post-heading h1 {
   font-size: 35px;
@@ -211,20 +248,20 @@ hr.small {
   font-weight: 600;
 }
 .intro-header .post-heading .meta {
-  font-family: 'GoudyOldStyleRegular', 'Times New Roman', serif;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-style: italic;
   font-weight: 300;
   font-size: 20px;
 }
 .intro-header .post-heading .meta a {
-  color: white;
+  color: #f8f8f2;
 }
 @media only screen and (min-width: 768px) {
   .intro-header .post-heading h1 {
-    font-size: 55px;
+    font-size: 35px;
   }
   .intro-header .post-heading .subheading {
-    font-size: 30px;
+    font-size: 25px;
   }
 }
 .post-preview > a {
@@ -233,7 +270,7 @@ hr.small {
 .post-preview > a:hover,
 .post-preview > a:focus {
   text-decoration: none;
-  color: #0085A1;
+  color: #AF1B3F;
 }
 .post-preview > a > .post-title {
   font-size: 30px;
@@ -246,7 +283,7 @@ hr.small {
   margin-bottom: 10px;
 }
 .post-preview > .post-meta {
-  color: #808080;
+  color: #424342;
   font-size: 18px;
   font-style: italic;
   margin-top: 0;
@@ -257,7 +294,7 @@ hr.small {
 }
 .post-preview > .post-meta > a:hover,
 .post-preview > .post-meta > a:focus {
-  color: #0085A1;
+  color: #AF1B3F;
   text-decoration: underline;
 }
 @media only screen and (min-width: 768px) {
@@ -337,7 +374,7 @@ footer .copyright {
   opacity: 1;
 }
 .floating-label-form-group-with-focus label {
-  color: #0085A1;
+  color: #AF1B3F;
 }
 form .row:first-child .floating-label-form-group {
   border-top: 1px solid #eee;
@@ -355,11 +392,14 @@ form .row:first-child .floating-label-form-group {
   font-size: 16px;
   padding: 25px 35px;
 }
+.btn-default {
+  background-color: #f8f8f2;
+}
 .btn-default:hover,
 .btn-default:focus {
-  background-color: #0085A1;
-  border: 1px solid #0085A1;
-  color: white;
+  background-color: #AF1B3F;
+  border: 1px solid #AF1B3F;
+  color: #f8f8f2;
 }
 .pager {
   margin: 20px 0 0;
@@ -372,7 +412,7 @@ form .row:first-child .floating-label-form-group {
   font-weight: 800;
   letter-spacing: 1px;
   padding: 10px 5px;
-  background-color: white;
+  background-color: #f8f8f2;
   border-radius: 0;
 }
 @media only screen and (min-width: 768px) {
@@ -384,38 +424,23 @@ form .row:first-child .floating-label-form-group {
 }
 .pager li > a:hover,
 .pager li > a:focus {
-  color: white;
-  background-color: #0085A1;
-  border: 1px solid #0085A1;
+  color: #f8f8f2;
+  background-color: #AF1B3F;
+  border: 1px solid #AF1B3F;
 }
 .pager .disabled > a,
 .pager .disabled > a:hover,
 .pager .disabled > a:focus,
 .pager .disabled > span {
-  color: #808080;
+  color: #424342;
   background-color: #282a36;
   cursor: not-allowed;
 }
-::-moz-selection {
-  color: white;
-  text-shadow: none;
-  background: #0085A1;
-}
-::selection {
-  color: white;
-  text-shadow: none;
-  background: #0085A1;
-}
-img::selection {
-  color: white;
-  background: transparent;
-}
-img::-moz-selection {
-  color: white;
-  background: transparent;
+.fa-inverse {
+  color: #f8f8f2;
 }
 body {
-  webkit-tap-highlight-color: #0085A1;
+  webkit-tap-highlight-color: #AF1B3F;
 }
 #disqus_thread {
   padding-top: 2em;
@@ -429,16 +454,6 @@ body {
   font-family: 'Futrista';
   src: url('../fonts/Futrista.eot');
   src: url('../fonts/Futrista.eot') format('embedded-opentype'), url('../fonts/Futrista.woff2') format('woff2'), url('../fonts/Futrista.woff') format('woff'), url('../fonts/Futrista.ttf') format('truetype'), url('../fonts/Futrista.svg#Futrista') format('svg');
-}
-@font-face {
-  font-family: 'GoudyOldStyleRegular';
-  src: url('../fonts/GoudyOldStyleRegular.eot');
-  src: url('../fonts/GoudyOldStyleRegular.eot') format('embedded-opentype'), url('../fonts/GoudyOldStyleRegular.woff2') format('woff2'), url('../fonts/GoudyOldStyleRegular.woff') format('woff'), url('../fonts/GoudyOldStyleRegular.ttf') format('truetype'), url('../fonts/GoudyOldStyleRegular.svg#GoudyOldStyleRegular') format('svg');
-}
-@font-face {
-  font-family: 'slingnormal';
-  src: url('../fonts/Sling-webfont.eot');
-  src: url('../fonts/Sling-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Sling-webfont.woff2') format('woff2'), url('../fonts/Sling-webfont.woff') format('woff'), url('../fonts/Sling-webfont.ttf') format('truetype'), url('../fonts/Sling-webfont.svg#slingnormal') format('svg');
 }
 @font-face {
   font-family: 'flamamediumregular';

@@ -4,10 +4,11 @@
 // Global Components
 
 body {
-	.serif;
-	font-size: 20px;
+	.sans-serif;
+	font-size: 18px;
 	color: @gray-dark;
-	font-weight: 200;
+	background: @white;
+	// font-weight: 100;
 }
 
 // -- Typography
@@ -26,8 +27,8 @@ h3,
 h4,
 h5,
 h6 {
-	.sans-serif;
-	font-weight: 500;
+	.sans-serif-title;
+	font-weight: 400;
 }
 
 a {
@@ -69,15 +70,15 @@ blockquote {
 
 hr.small {
 	max-width: 100px;
-	margin: 15px auto;
+	margin: 5px auto;
 	border-width: 4px;
-	border-color: @white;
+	border-color: @gray-dark;
 }
 
 // Navigation
 
 .navbar-custom {
-	background: @white;
+	background: @gray-dark;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -103,6 +104,7 @@ hr.small {
 		border-bottom: 1px solid transparent;
 		.navbar-brand {
 			color: @white;
+			height: 60px;
 			padding: 20px;
 			font-family: 'Universe';
 			&:hover,
@@ -139,8 +141,8 @@ hr.small {
 			/* when the user scrolls down, we hide the header right above the viewport */
 			position: fixed;
 			top: -61px;
-			background-color: fade(white, 90%);
-			border-bottom: 1px solid darken(white, 5%);
+			background-color: fade(@white, 90%);
+			border-bottom: 1px solid darken(@white, 5%);
 			-webkit-transition: -webkit-transform 0.3s;
 			-moz-transition: -moz-transform 0.3s;
 			transition: transform 0.3s;
@@ -174,6 +176,41 @@ hr.small {
 	}
 }
 
+.navbar-default {
+	.navbar-brand {
+		color: @white;
+		&:hover, &:focus {
+			background-color: @white;
+			color: @gray-dark;
+		}
+	}
+	.navbar-toggle .icon-bar {
+		background-color: @white;
+	}
+	.navbar-nav {
+		margin: 0px -15px;
+		&>li>a {
+			color: @white;
+			&:hover, &:focus {
+				background-color: @white;
+				color: @gray-dark;
+			}
+		}
+	}
+	.navbar-toggle {
+		color: @white;
+		border-color: @white;
+		&:hover, &:focus {
+			background-color: @white;
+			color: @gray-dark;
+			.icon-bar {
+				background-color: @gray-dark;
+				color: @gray-dark;
+			}
+		}
+	}
+}
+
 .navbar-bg {
 	background-color: @gray-dark;
 	padding: 25px 0px;
@@ -193,12 +230,12 @@ hr.small {
 	margin-bottom: 15px;
 	.site-heading,
 	.page-heading {
-		padding: 50px 0 50px;
+		padding: 30px 0 30px;
 		text-align: center;
-		color: @white;
+		color: @gray-dark;
 		h1 {
 			margin-top: 0;
-			font-size: 50px;
+			font-size: 35px;
 			text-transform: uppercase;
 			letter-spacing: -1.5px;
 		}
@@ -206,19 +243,19 @@ hr.small {
 			font-size: 24px;
 			line-height: 1.1;
 			display: block;
-			.sans-serif;
+			.sans-serif-title;
 			font-weight: 300;
 			margin: 10px 0 0;
 		}
 		@media only screen and (min-width: 768px) {
 			h1 {
-				font-size: 80px;
+				font-size: 40px;
 			}
 		}
 	}
 	.post-heading {
 		color: @gray-dark;
-		padding: 50px 0 15px;
+		padding: 30px 0 15px;
 		h1 {
 			font-size: 35px;
 		}
@@ -228,13 +265,13 @@ hr.small {
 			display: block;
 		}
 		.subheading {
-			.sans-serif;
+			.sans-serif-title;
 			font-size: 24px;
 			margin: 10px 0 30px;
 			font-weight: 600;
 		}
 		.meta {
-			.serif;
+			.sans-serif;
 			font-style: italic;
 			font-weight: 300;
 			font-size: 20px;
@@ -244,10 +281,10 @@ hr.small {
 		}
 		@media only screen and (min-width: 768px) {
 			h1 {
-				font-size: 55px;
+				font-size: 35px;
 			}
 			.subheading {
-				font-size: 30px;
+				font-size: 25px;
 			}
 		}
 	}
@@ -393,7 +430,7 @@ form .row:first-child .floating-label-form-group {
 // Button Styles
 
 .btn {
-	.sans-serif;
+	.sans-serif-title;
 	text-transform: uppercase;
 	font-size: 14px;
 	font-weight: 800;
@@ -408,6 +445,7 @@ form .row:first-child .floating-label-form-group {
 }
 
 .btn-default {
+	background-color: @white;
 	&:hover,
 	&:focus {
 		background-color: @brand-primary;
@@ -425,7 +463,7 @@ form .row:first-child .floating-label-form-group {
 	li {
 		> a,
 		> span {
-			.sans-serif;
+			.sans-serif-title;
 			text-transform: uppercase;
 			font-size: 14px;
 			font-weight: 800;
@@ -459,28 +497,8 @@ form .row:first-child .floating-label-form-group {
 	}
 }
 
-// -- Highlight Color Customization
-
-::-moz-selection {
-	color: @white;
-	text-shadow: none;
-	background: @brand-primary;
-}
-
-::selection {
-	color: @white;
-	text-shadow: none;
-	background: @brand-primary;
-}
-
-img::selection {
-	color: @white;
-	background: transparent;
-}
-
-img::-moz-selection {
-	color: @white;
-	background: transparent;
+.fa-inverse {
+    color: @white;
 }
 
 body {
@@ -512,26 +530,6 @@ body {
          url('../fonts/Futrista.svg#Futrista') format('svg');
 }
 
-@font-face {
-    font-family: 'GoudyOldStyleRegular';
-    src: url('../fonts/GoudyOldStyleRegular.eot');
-    src: url('../fonts/GoudyOldStyleRegular.eot') format('embedded-opentype'),
-         url('../fonts/GoudyOldStyleRegular.woff2') format('woff2'),
-         url('../fonts/GoudyOldStyleRegular.woff') format('woff'),
-         url('../fonts/GoudyOldStyleRegular.ttf') format('truetype'),
-         url('../fonts/GoudyOldStyleRegular.svg#GoudyOldStyleRegular') format('svg');
-}
-
-@font-face {
-    font-family: 'slingnormal';
-    src: url('../fonts/Sling-webfont.eot');
-    src: url('../fonts/Sling-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/Sling-webfont.woff2') format('woff2'),
-         url('../fonts/Sling-webfont.woff') format('woff'),
-         url('../fonts/Sling-webfont.ttf') format('truetype'),
-         url('../fonts/Sling-webfont.svg#slingnormal') format('svg');
-
-}
 @font-face {
     font-family: 'flamamediumregular';
     src: url('../fonts/FlamaMedium-webfont.eot');
