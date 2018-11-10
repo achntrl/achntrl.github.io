@@ -11,7 +11,7 @@ linkedin_username: alexandrechaintreuil
 author: Alexandre Chaintreuil
 
 # Build settings
-plugins: [jekyll-paginate]
+plugins: [jekyll-paginate, jekyll-sitemap]
 markdown: kramdown
 # highlighter: pygments
 permalink: pretty
