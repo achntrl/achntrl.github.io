@@ -24,6 +24,12 @@ layout: default
                         on {{ page.date | date: "%B %-d, %Y" }}
                         {% if page.update-date and page.update-date != page.date %}
                             and updated on {{ page.update-date | date: "%B %-d, %Y" }}
+                        {% else %}
+                            {% unless page.update-date%}
+                                {% if page.last_modified_at and page.last_modified_at != page.date %}
+                                    and updated on {{ page.last_modified_at | date: "%B %-d, %Y" }}
+                                {% endif %}
+                            {% endunless %}
                         {% endif %}
                     </span>
                 </div>

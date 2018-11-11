@@ -27,6 +27,12 @@ nav: True
         on {{ post.date | date: "%B %-d, %Y" }}
         {% if post.update-date and post.update-date != post.date %}
             and updated on {{ post.update-date | date: "%B %-d, %Y" }}
+        {% else %}
+            {% unless post.update-date%}
+                {% if post.last_modified_at and post.last_modified_at != post.date %}
+                    and updated on {{ post.last_modified_at | date: "%B %-d, %Y" }}
+                {% endif %}
+            {% endunless %}
         {% endif %}
     </p>
 </div>
