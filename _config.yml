@@ -16,4 +16,4 @@ markdown: kramdown
 # highlighter: pygments
 permalink: pretty
 paginate: 10
-exclude: ["node_modules","Gruntfile.js","package.json","README.md",]
+exclude: ["node_modules","Gruntfile.js","package.json","README.md","less"]
