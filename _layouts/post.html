@@ -25,9 +25,6 @@ layout: default
                         {% if page.update-date and page.update-date != page.date %}
                             and updated on {{ page.update-date | date: "%B %-d, %Y" }}
                         {% endif %}
-                        {% if page.last-modified-date and page.last-modified-date != page.date %}
-                            and updated on {{ page.last-modified-date | date: "%B %-d, %Y" }}
-                        {% endif %}
                     </span>
                 </div>
                 </div>
