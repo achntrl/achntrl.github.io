@@ -81,5 +81,5 @@ on the master node and 0 kbps reads.
 
 ## Next projects
 
-- Measure humidity and temperature in my appartment and send them to a Datadog dashboard with Dogstatsd. I ordered some NodeMCU and DHT22 on Aliexpress but they will take time to arrive :(
+- ~~Measure humidity and temperature in my appartment and send them to a Datadog dashboard with Dogstatsd. I ordered some NodeMCU and DHT22 on Aliexpress but they will take time to arrive~~
 - Find a way to rate limit my url with basic auth to prevent brute force attack / DDoS
