@@ -1,6 +1,6 @@
 ---
 layout:      post
-title:       "Build Your Own Cloud with Kubernetes and Some Raspberry Pi"
+title:       "Build your own cloud with Kubernetes and some Raspberry Pi"
 description: "Managing several Raspberry Pi can be a lot of work. This article will teach you how Kubernetes and Docker will make your life easier."
 date:        2018-09-13 12:00:00
 update-date: 2018-09-13 12:00:00

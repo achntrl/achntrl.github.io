@@ -1,6 +1,6 @@
 ---
 layout:      post
-title:       "Survive Vim With these 5 Simple Tricks"
+title:       "Survive Vim with these 5 simple tricks"
 date:        2017-02-28 12:00:00
 update-date: 2017-02-28 12:00:00
 author:      "Alexandre"
