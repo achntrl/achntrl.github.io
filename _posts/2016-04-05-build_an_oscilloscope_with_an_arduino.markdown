@@ -9,6 +9,8 @@ comments:    True
 
 ---
 
+*Update (01/09/2016):* [New version here](https://github.com/achntrl/arduino-oscilloscope)
+
 Let's say you bought an Arduino and a starter kit, but you don't own (yet!) a lot of tools, like a multimeter or an oscilloscope. And yet, you need to read a tension to make sure your circuit is working properly. How do you do that?
 
 Simple: with your Arduino
@@ -155,8 +157,6 @@ void serialEvent (Serial serialConnexion)
 
 <img src="{{ site.baseurl }}/img/oscillogramme.png" alt="Oscillogramme">
 <span class="caption text-muted">"L" led voltage when the reset button is pressed (on another arduino)</span>
-
-*Update (01/09/2016):* [New version here](https://github.com/achntrl/arduino-oscilloscope)
 
 ## ~~Todo in the future~~
 
