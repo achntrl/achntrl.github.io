@@ -1,6 +1,6 @@
 /*!
  * Alexandre Chaintreuil v1.0.0 (https://achntrl.com)
- * Copyright 2018 Alexandre Chaintreuil
+ * Copyright 2019 Alexandre Chaintreuil
  * Licensed under Apache 2.0 (https://github.com/achntrl/achntrl.github.io/blob/master/LICENSE)
  */
 
@@ -31,7 +31,7 @@ a {
 }
 a:hover,
 a:focus {
-  color: #af1b3f;
+  color: #AF1B3F;
 }
 a img:hover,
 a img:focus {
@@ -46,7 +46,7 @@ blockquote:before {
   content: open-quote;
   font-size: 2em;
   line-height: 0.1em;
-  margin-right: 0.40em;
+  margin-right: 0.4em;
   vertical-align: -0.2em;
 }
 blockquote:after {
@@ -54,7 +54,7 @@ blockquote:after {
   content: close-quote;
   font-size: 2em;
   line-height: 0.1em;
-  margin-right: 0.40em;
+  margin-right: 0.4em;
   vertical-align: -0.2em;
 }
 hr.small {
@@ -135,14 +135,14 @@ hr.small {
   }
   .navbar-custom.is-fixed .navbar-brand:hover,
   .navbar-custom.is-fixed .navbar-brand:focus {
-    color: #af1b3f;
+    color: #AF1B3F;
   }
   .navbar-custom.is-fixed .nav li a {
     color: #282a36;
   }
   .navbar-custom.is-fixed .nav li a:hover,
   .navbar-custom.is-fixed .nav li a:focus {
-    color: #af1b3f;
+    color: #AF1B3F;
   }
   .navbar-custom.is-visible {
     /* if the user changes the scrolling direction, we show the header */
@@ -276,7 +276,7 @@ hr.small {
 .post-preview > a:hover,
 .post-preview > a:focus {
   text-decoration: none;
-  color: #af1b3f;
+  color: #AF1B3F;
 }
 .post-preview > a > .post-title {
   font-size: 30px;
@@ -300,7 +300,7 @@ hr.small {
 }
 .post-preview > .post-meta > a:hover,
 .post-preview > .post-meta > a:focus {
-  color: #af1b3f;
+  color: #AF1B3F;
   text-decoration: underline;
 }
 @media only screen and (min-width: 768px) {
@@ -340,7 +340,7 @@ footer .copyright {
   position: relative;
   margin-bottom: 0;
   padding-bottom: 0.5em;
-  border-bottom: 1px solid #eeeeee;
+  border-bottom: 1px solid #eee;
 }
 .floating-label-form-group input,
 .floating-label-form-group textarea {
@@ -362,28 +362,28 @@ footer .copyright {
   top: 2em;
   margin: 0;
   font-size: 0.85em;
-  line-height: 1.764705882em;
+  line-height: 1.76470588em;
   vertical-align: middle;
   vertical-align: baseline;
   opacity: 0;
-  -webkit-transition: top 0.3s ease,opacity 0.3s ease;
-  -moz-transition: top 0.3s ease,opacity 0.3s ease;
-  -ms-transition: top 0.3s ease,opacity 0.3s ease;
-  transition: top 0.3s ease,opacity 0.3s ease;
+  -webkit-transition: top 0.3s ease, opacity 0.3s ease;
+  -moz-transition: top 0.3s ease, opacity 0.3s ease;
+  -ms-transition: top 0.3s ease, opacity 0.3s ease;
+  transition: top 0.3s ease, opacity 0.3s ease;
 }
 .floating-label-form-group::not(:first-child) {
   padding-left: 14px;
-  border-left: 1px solid #eeeeee;
+  border-left: 1px solid #eee;
 }
 .floating-label-form-group-with-value label {
   top: 0;
   opacity: 1;
 }
 .floating-label-form-group-with-focus label {
-  color: #af1b3f;
+  color: #AF1B3F;
 }
 form .row:first-child .floating-label-form-group {
-  border-top: 1px solid #eeeeee;
+  border-top: 1px solid #eee;
 }
 .btn {
   font-family: 'flamamediumregular', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -403,8 +403,8 @@ form .row:first-child .floating-label-form-group {
 }
 .btn-default:hover,
 .btn-default:focus {
-  background-color: #af1b3f;
-  border: 1px solid #af1b3f;
+  background-color: #AF1B3F;
+  border: 1px solid #AF1B3F;
   color: #f8f8f2;
 }
 .pager {
@@ -431,8 +431,8 @@ form .row:first-child .floating-label-form-group {
 .pager li > a:hover,
 .pager li > a:focus {
   color: #f8f8f2;
-  background-color: #af1b3f;
-  border: 1px solid #af1b3f;
+  background-color: #AF1B3F;
+  border: 1px solid #AF1B3F;
 }
 .pager .disabled > a,
 .pager .disabled > a:hover,
@@ -446,7 +446,7 @@ form .row:first-child .floating-label-form-group {
   color: #f8f8f2;
 }
 body {
-  webkit-tap-highlight-color: #af1b3f;
+  webkit-tap-highlight-color: #AF1B3F;
 }
 #disqus_thread {
   padding-top: 2em;
